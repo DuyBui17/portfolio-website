@@ -1,0 +1,201 @@
+export const translations = {
+  en: {
+    nav: {
+      home: "Home",
+      about: "About",
+      projects: "Projects",
+      experience: "Experience",
+      contact: "Contact",
+    },
+    hero: {
+      title: "Flutter Developer",
+      subtitle: "Building scalable mobile solutions with Clean Architecture, optimized performance, and seamless API integration",
+      viewWork: "View My Work",
+      letsTalk: "Let's Talk",
+    },
+    about: {
+      title: "About Me",
+      description: "Flutter Developer specializing in Clean Architecture and high-performance mobile applications. Experienced in building scalable solutions with seamless API integration and optimized user experiences.",
+    },
+    techStack: {
+      title: "Technical Stack",
+      subtitle: "Technologies and tools I use to build production-ready applications",
+    },
+    projects: {
+      title: "Featured Projects",
+      subtitle: "Real-world applications demonstrating technical expertise and business impact",
+      featured: "Featured",
+      enterprise: "Enterprise",
+      iot: "IoT",
+      gis: "GIS",
+      ecommerce: "E-commerce",
+      context: "Context",
+      role: "Role",
+      techStack: "Tech Stack",
+      impact: "Impact",
+      viettel: {
+        title: "Viettel Enterprise Solution",
+        context: "Enterprise mobile application for Viettel's internal operations and customer management",
+        role: "Lead Flutter Developer - Architecture design, API integration, performance optimization",
+        impact: "Improved operational efficiency and streamlined customer service workflows",
+      },
+      iotWater: {
+        title: "Aqua Farm Mobile",
+        context: "Real-time monitoring system for water quality parameters with cloud integration",
+        role: "Full-stack Developer - Mobile app development, AWS IoT integration, real-time data visualization",
+        impact: "Enabled real-time monitoring with 99.9% uptime and instant alert notifications",
+      },
+      gisMapping: {
+        title: "GIS Mapping Application",
+        context: "Geographic information system for field data collection and mapping",
+        role: "Mobile Developer - Map integration, offline data sync, location services",
+        impact: "Reduced field data collection time by 40% with offline-first architecture",
+      },
+      loyalty: {
+        title: "Customer Loyalty Platform",
+        context: "Loyalty points management system for retail businesses",
+        role: "Full-stack Developer - Backend API, admin dashboard, mobile integration",
+        impact: "Increased customer retention by 25% through gamified rewards system",
+      },
+    },
+    experience: {
+      title: "Experience",
+      current: "Current",
+      flutter: {
+        title: "Flutter Developer",
+        company: "OS Viettel Software",
+        description: "• Participated in developing Vehicle Management and Business Trip modules for enterprise internal system\n• Built main business flows: request creation, approval process, and status tracking\n• Developed input forms, list screens, and detail screens with comprehensive validation\n• Integrated RESTful API to synchronize vehicle data, schedules, and business trip records\n• Optimized performance using pagination (load-more), caching, and handling loading/error/empty states\n• Applied BLoC and modular architecture to ensure scalability and long-term maintainability",
+      },
+      frontend: {
+        title: "Fresher Frontend Developer",
+        company: "Novax",
+        description: "• Built web admin dashboards with modern frontend frameworks\n• Collaborated with backend teams for API integration",
+      },
+      student: {
+        title: "Information Technology Student",
+        company: "Hanoi University of Mining and Geology",
+        description: "High Quality Program • GPA: 3.38/4.0 • Expected graduation: June 2025",
+      },
+    },
+    contact: {
+      title: "Let's Build Together",
+      subtitle: "Ready to build scalable mobile products together? Let's discuss your next project.",
+      getInTouch: "Get In Touch",
+      available: "Available for Flutter development opportunities and collaborations",
+      email: "Email",
+      phone: "Phone",
+      location: "Location",
+      sendEmail: "Send Email",
+    },
+    cta: {
+      title: "Let's build scalable mobile products together",
+      subtitle: "Specialized in Flutter development with Clean Architecture, performance optimization, and seamless API integration",
+      startProject: "Start a Project",
+      viewGithub: "View GitHub",
+    },
+    footer: {
+      copyright: "© 2025 Bui Van Duy. Flutter Developer.",
+    },
+  },
+  vi: {
+    nav: {
+      home: "Trang chủ",
+      about: "Giới thiệu",
+      projects: "Dự án",
+      experience: "Kinh nghiệm",
+      contact: "Liên hệ",
+    },
+    hero: {
+      title: "Lập trình viên Flutter",
+      subtitle: "Xây dựng giải pháp di động mở rộng với Clean Architecture, hiệu năng tối ưu và tích hợp API liền mạch",
+      viewWork: "Xem dự án",
+      letsTalk: "Liên hệ",
+    },
+    about: {
+      title: "Giới thiệu",
+      description: "Lập trình viên Flutter chuyên về Clean Architecture và ứng dụng di động hiệu năng cao. Có kinh nghiệm xây dựng giải pháp mở rộng với tích hợp API liền mạch và trải nghiệm người dùng được tối ưu hóa.",
+    },
+    techStack: {
+      title: "Công nghệ sử dụng",
+      subtitle: "Các công nghệ và công cụ tôi sử dụng để xây dựng ứng dụng production",
+    },
+    projects: {
+      title: "Dự án nổi bật",
+      subtitle: "Ứng dụng thực tế thể hiện chuyên môn kỹ thuật và tác động kinh doanh",
+      featured: "Nổi bật",
+      enterprise: "Doanh nghiệp",
+      iot: "IoT",
+      gis: "GIS",
+      ecommerce: "Thương mại điện tử",
+      context: "Bối cảnh",
+      role: "Vai trò",
+      techStack: "Công nghệ",
+      impact: "Kết quả",
+      viettel: {
+        title: "Giải pháp doanh nghiệp Viettel",
+        context: "Ứng dụng di động doanh nghiệp cho hoạt động nội bộ và quản lý khách hàng của Viettel",
+        role: "Lead Flutter Developer - Thiết kế kiến trúc, tích hợp API, tối ưu hiệu năng",
+        impact: "Cải thiện hiệu quả vận hành và tối ưu quy trình dịch vụ khách hàng",
+      },
+      iotWater: {
+        title: "Hệ thống giám sát chất lượng nước hỗ trợ nông nghiệp",
+        context: "Hệ thống giám sát thời gian thực các thông số chất lượng nước với tích hợp đám mây",
+        role: "Full-stack Developer - Phát triển ứng dụng di động, tích hợp AWS IoT, trực quan hóa dữ liệu thời gian thực",
+        impact: "Cho phép giám sát thời gian thực với 99.9% uptime và thông báo cảnh báo tức thì",
+      },
+      gisMapping: {
+        title: "Ứng dụng bản đồ GIS",
+        context: "Hệ thống thông tin địa lý để thu thập dữ liệu thực địa và lập bản đồ",
+        role: "Mobile Developer - Tích hợp bản đồ, đồng bộ dữ liệu offline, dịch vụ vị trí",
+        impact: "Giảm 40% thời gian thu thập dữ liệu thực địa với kiến trúc offline-first",
+      },
+      loyalty: {
+        title: "Nền tảng tích điểm khách hàng",
+        context: "Hệ thống quản lý điểm thưởng cho doanh nghiệp bán lẻ",
+        role: "Full-stack Developer - Backend API, bảng điều khiển quản trị, tích hợp di động",
+        impact: "Tăng 25% tỷ lệ giữ chân khách hàng thông qua hệ thống phần thưởng gamification",
+      },
+    },
+    experience: {
+      title: "Kinh nghiệm",
+      current: "Hiện tại",
+      flutter: {
+        title: "Lập trình viên Flutter",
+        company: "OS Viettel Software",
+        description: "• Tham gia phát triển các module Quản lý phương tiện và Công tác phí cho hệ thống nội bộ doanh nghiệp\n• Xây dựng các luồng nghiệp vụ chính: tạo yêu cầu, quy trình phê duyệt và theo dõi trạng thái\n• Phát triển form nhập liệu, màn hình danh sách và chi tiết với xử lý validation đầy đủ\n• Tích hợp RESTful API để đồng bộ dữ liệu phương tiện, lịch trình và hồ sơ công tác\n• Tối ưu hiệu năng bằng pagination (load-more), caching và xử lý các trạng thái loading/error/empty\n• Áp dụng BLoC và kiến trúc module để đảm bảo khả năng mở rộng và bảo trì lâu dài",
+      },
+      frontend: {
+        title: "Lập trình viên Frontend",
+        company: "Novax",
+        description: "• Xây dựng bảng điều khiển quản trị web với framework frontend hiện đại\n• Cộng tác với nhóm backend để tích hợp API",
+      },
+      student: {
+        title: "Sinh viên Công nghệ thông tin",
+        company: "Đại học Mỏ - Địa chất Hà Nội",
+        description: "Chương trình Chất lượng cao • GPA: 3.38/4.0 • Dự kiến tốt nghiệp: Tháng 6/2025",
+      },
+    },
+    contact: {
+      title: "Cùng xây dựng",
+      subtitle: "Sẵn sàng xây dựng sản phẩm di động mở rộng cùng nhau? Hãy thảo luận về dự án tiếp theo của bạn.",
+      getInTouch: "Liên hệ",
+      available: "Sẵn sàng cho các cơ hội phát triển Flutter và hợp tác",
+      email: "Email",
+      phone: "Điện thoại",
+      location: "Địa điểm",
+      sendEmail: "Gửi Email",
+    },
+    cta: {
+      title: "Cùng xây dựng sản phẩm di động mở rộng",
+      subtitle: "Chuyên về phát triển Flutter với Clean Architecture, tối ưu hiệu năng và tích hợp API liền mạch",
+      startProject: "Bắt đầu dự án",
+      viewGithub: "Xem GitHub",
+    },
+    footer: {
+      copyright: "© 2025 Bùi Văn Duy. Lập trình viên Flutter.",
+    },
+  },
+} as const;
+
+export type Language = keyof typeof translations;
+export type TranslationKeys = typeof translations.en;
