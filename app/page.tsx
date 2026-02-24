@@ -2,8 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
-import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, Code, Palette, Smartphone, Globe, Award, Calendar, User, Briefcase, Menu } from 'lucide-react'
+import { Github, Linkedin, Mail, Phone, MapPin, Code, Smartphone, Globe } from 'lucide-react'
 import Image from "next/image"
 import Link from "next/link"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -41,43 +40,42 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="container mx-auto max-w-7xl space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32 px-4">
-        <div className="mx-auto flex max-w-[980px] flex-col items-center gap-2 text-center">
-          <div className="relative mb-8">
+      <section id="home" className="container mx-auto max-w-7xl space-y-8 pb-12 pt-8 md:pb-16 md:pt-12 lg:py-28 px-4">
+        <div className="mx-auto flex max-w-[980px] flex-col items-center gap-6 text-center">
+          <div className="relative mb-4">
             <Image
               src="/IMG_2307.jpg"
               alt="Profile - Bùi Văn Duy"
-              width={200}
-              height={200}
+              width={160}
+              height={160}
               className="rounded-full border-4 border-primary/20 mx-auto object-cover aspect-square"
               priority
             />
           </div>
-          <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1]">
-            Hello, I'm{" "}
-            <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Bui Van Duy
-            </span>
-          </h1>
-          <p className="max-w-[750px] text-lg text-muted-foreground sm:text-xl">
-            Flutter Developer with a passion for mobile app development.
-          </p>
-          <div className="flex gap-4 mt-6">
-            <Button size="lg" asChild>
-              <Link href="#projects">View Projects</Link>
+          <div className="space-y-4">
+            <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl lg:leading-[1.1]">
+              Flutter Developer
+            </h1>
+            <p className="max-w-[700px] text-xl text-muted-foreground md:text-2xl font-light">
+              Building scalable mobile solutions with Clean Architecture, optimized performance, and seamless API integration
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-4 mt-8 justify-center">
+            <Button size="lg" className="text-base px-8" asChild>
+              <Link href="#projects">View My Work</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link href="#contact">Contact Me</Link>
+            <Button variant="outline" size="lg" className="text-base px-8" asChild>
+              <Link href="#contact">Let's Talk</Link>
             </Button>
           </div>
-          <div className="flex items-center gap-4 mt-4">
-            <Link href="https://github.com/duybui03" className="text-muted-foreground hover:text-foreground">
+          <div className="flex items-center gap-6 mt-6">
+            <Link href="https://github.com/duybui03" className="text-muted-foreground hover:text-foreground transition-colors">
               <Github className="h-6 w-6" />
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-foreground">
+            <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
               <Linkedin className="h-6 w-6" />
             </Link>
-            <Link href="mailto:duyka207@gmail.com" className="text-muted-foreground hover:text-foreground">
+            <Link href="mailto:duyka207@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors">
               <Mail className="h-6 w-6" />
             </Link>
           </div>
@@ -85,493 +83,438 @@ export default function Portfolio() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="container mx-auto max-w-7xl py-8 md:py-12 lg:py-24 px-4">
+      <section id="about" className="container mx-auto max-w-7xl py-12 md:py-16 lg:py-20 px-4">
         <div className="mx-auto max-w-[980px]">
-          <div className="flex flex-col items-center space-y-4 text-center">
-            <Badge variant="secondary" className="mb-4">
-              <User className="mr-2 h-4 w-4" />
-              About
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              About me
+          <div className="flex flex-col items-center space-y-6 text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              About Me
             </h2>
-            <p className="max-w-[700px] text-lg text-muted-foreground">
-              A final-year Information Technology student at Hanoi University of Mining and Geology, currently developing practical skills in mobile and IoT at RBC Tech Vietnam.
+            <p className="max-w-[650px] text-lg text-muted-foreground leading-relaxed">
+              Flutter Developer specializing in Clean Architecture and high-performance mobile applications.
+              Experienced in building scalable solutions with seamless API integration and optimized user experiences.
             </p>
           </div>
-          <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 mt-12 place-items-stretch">
-            <Card className="w-full">
-              <CardHeader className="text-center">
-                <Smartphone className="h-10 w-10 text-primary mx-auto mb-2" />
-                <CardTitle>Mobile Development</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-sm text-muted-foreground">
-                  Specialized in Flutter for developing high-performance cross-platform mobile applications.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="w-full">
-              <CardHeader className="text-center">
-                <Code className="h-10 w-10 text-primary mx-auto mb-2" />
-                <CardTitle>Full-stack Development</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-sm text-muted-foreground">
-                  Experience with ReactJS, VueJS, NodeJS to build complete web applications.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="w-full">
-              <CardHeader className="text-center">
-                <Globe className="h-10 w-10 text-primary mx-auto mb-2" />
-                <CardTitle>Cloud & IoT</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-sm text-muted-foreground">
-                  Using AWS (EC2, Lambda, IoT Core, DynamoDB) for IoT systems and cloud computing.
-                </p>
-              </CardContent>
-            </Card>
+        </div>
+      </section>
+
+      {/* Technical Stack Section */}
+      <section className="container mx-auto max-w-7xl py-12 md:py-16 lg:py-20 px-4 bg-muted/30">
+        <div className="mx-auto max-w-[980px]">
+          <div className="flex flex-col items-center space-y-6 text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              Technical Stack
+            </h2>
+            <p className="max-w-[650px] text-lg text-muted-foreground">
+              Technologies and tools I use to build production-ready applications
+            </p>
+          </div>
+
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-4xl mx-auto">
+            <div className="flex flex-col items-center gap-3 group">
+              <div className="w-16 h-16 flex items-center justify-center rounded-xl bg-background border-2 group-hover:border-primary transition-colors">
+                <Smartphone className="h-8 w-8 text-primary" />
+              </div>
+              <span className="text-sm font-medium">Flutter</span>
+            </div>
+            <div className="flex flex-col items-center gap-3 group">
+              <div className="w-16 h-16 flex items-center justify-center rounded-xl bg-background border-2 group-hover:border-primary transition-colors">
+                <Code className="h-8 w-8 text-primary" />
+              </div>
+              <span className="text-sm font-medium">Dart</span>
+            </div>
+            <div className="flex flex-col items-center gap-3 group">
+              <div className="w-16 h-16 flex items-center justify-center rounded-xl bg-background border-2 group-hover:border-primary transition-colors">
+                <Globe className="h-8 w-8 text-primary" />
+              </div>
+              <span className="text-sm font-medium">AWS</span>
+            </div>
+            <div className="flex flex-col items-center gap-3 group">
+              <div className="w-16 h-16 flex items-center justify-center rounded-xl bg-background border-2 group-hover:border-primary transition-colors">
+                <Code className="h-8 w-8 text-primary" />
+              </div>
+              <span className="text-sm font-medium">REST API</span>
+            </div>
+            <div className="flex flex-col items-center gap-3 group">
+              <div className="w-16 h-16 flex items-center justify-center rounded-xl bg-background border-2 group-hover:border-primary transition-colors">
+                <Code className="h-8 w-8 text-primary" />
+              </div>
+              <span className="text-sm font-medium">Git</span>
+            </div>
+            <div className="flex flex-col items-center gap-3 group">
+              <div className="w-16 h-16 flex items-center justify-center rounded-xl bg-background border-2 group-hover:border-primary transition-colors">
+                <Code className="h-8 w-8 text-primary" />
+              </div>
+              <span className="text-sm font-medium">Firebase</span>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="container mx-auto max-w-7xl py-8 md:py-12 lg:py-24 bg-muted/50 px-4">
-        <div className="mx-auto max-w-[980px]">
-          <div className="flex flex-col items-center space-y-4 text-center">
-            <Badge variant="secondary" className="mb-4">
-              <Briefcase className="mr-2 h-4 w-4" />
-              Projects
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+      <section id="projects" className="container mx-auto max-w-7xl py-12 md:py-16 lg:py-20 px-4">
+        <div className="mx-auto max-w-[1100px]">
+          <div className="flex flex-col items-center space-y-6 text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
               Featured Projects
             </h2>
-            <p className="max-w-[700px] text-lg text-muted-foreground">
-              Explore some of the projects I have worked on, from IoT water quality monitoring systems
-              to e-commerce web applications, dashboards and chatbots.
+            <p className="max-w-[650px] text-lg text-muted-foreground">
+              Real-world applications demonstrating technical expertise and business impact
             </p>
           </div>
 
-          <div className="mt-12 max-w-5xl mx-auto">
-            <Carousel className="w-full">
-              <CarouselContent className="-ml-2 md:-ml-4">
-                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="group hover:shadow-lg transition-shadow h-full project-card">
-                    <CardHeader className="card-header">
-                      <Image
-                        src="/Wi-Fi-AK-01.webp"
-                        alt="IoT Water Quality Monitoring System"
-                        width={400}
-                        height={200}
-                        className="object-cover w-full"
-                      />
-                    </CardHeader>
-                    <CardContent className="card-content">
-                      <CardTitle className="mb-2">IoT Water Quality Monitoring System</CardTitle>
-                      <CardDescription className="mb-4 card-description">
-                        Real-time IoT water quality monitoring system using Flutter and AWS.
-                      </CardDescription>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        <Badge variant="outline">Flutter</Badge>
-                        <Badge variant="outline">AWS IoT Core</Badge>
-                        <Badge variant="outline">DynamoDB</Badge>
-                      </div>
-                      <div className="flex gap-2 card-actions">
-                        <Button size="sm" variant="outline" asChild>
-                          <Link href="https://github.com/duybui03">
-                            <Github className="mr-2 h-4 w-4" />
-                            Code
-                          </Link>
-                        </Button>
-                        <Button size="sm" asChild>
-                          <Link href="#">
-                            <ExternalLink className="mr-2 h-4 w-4" />
-                            Demo
-                          </Link>
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
+          <div className="space-y-12">
+            {/* Viettel Project */}
+            <Card className="overflow-hidden border-2 hover:border-primary/50 transition-all">
+              <div className="grid md:grid-cols-5 gap-0">
+                <div className="md:col-span-2 flex justify-center items-center">
+                  <Image
+                    src="/viettel.png"
+                    alt="Viettel Enterprise Solution"
+                    width={300}
+                    height={180}
+                    className="object-contain"
+                  />
+                </div>
+                <div className="md:col-span-3 p-8 md:p-10">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Badge>Featured</Badge>
+                    <Badge variant="outline">Enterprise</Badge>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">Viettel Enterprise Solution</h3>
 
-                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="group hover:shadow-lg transition-shadow h-full project-card">
-                    <CardHeader className="card-header">
-                      <Image
-                        src="/tichdiem.png"
-                        alt="Customer Loyalty Points System"
-                        width={400}
-                        height={200}
-                        className="object-cover w-full"
-                      />
-                    </CardHeader>
-                    <CardContent className="card-content">
-                      <CardTitle className="mb-2">Customer Loyalty Points System</CardTitle>
-                      <CardDescription className="mb-4 card-description">
-                        Customer loyalty points management website with intuitive interface and comprehensive management features.
-                      </CardDescription>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        <Badge variant="outline">ReactJS</Badge>
-                        <Badge variant="outline">NodeJS</Badge>
-                        <Badge variant="outline">MongoDB</Badge>
+                  <div className="space-y-4 text-muted-foreground mb-6">
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Context</p>
+                      <p>Enterprise mobile application for Viettel's internal operations and customer management</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Role</p>
+                      <p>Lead Flutter Developer - Architecture design, API integration, performance optimization</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Tech Stack</p>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        <Badge variant="secondary">Flutter</Badge>
+                        <Badge variant="secondary">Clean Architecture</Badge>
+                        <Badge variant="secondary">REST API</Badge>
+                        <Badge variant="secondary">State Management</Badge>
                       </div>
-                      <div className="flex gap-2 card-actions">
-                        <Button size="sm" variant="outline" asChild>
-                          <Link href="https://github.com/duybui03">
-                            <Github className="mr-2 h-4 w-4" />
-                            Code
-                          </Link>
-                        </Button>
-                        <Button size="sm" asChild>
-                          <Link href="#">
-                            <ExternalLink className="mr-2 h-4 w-4" />
-                            Demo
-                          </Link>
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Impact</p>
+                      <p>Improved operational efficiency and streamlined customer service workflows</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
 
-                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="group hover:shadow-lg transition-shadow h-full project-card">
-                    <CardHeader className="card-header">
-                      <Image
-                        src="/image.png"
-                        alt="Facebook Fanpage Chatbot"
-                        width={400}
-                        height={200}
-                        className="object-cover w-full"
-                      />
-                    </CardHeader>
-                    <CardContent className="card-content">
-                      <CardTitle className="mb-2">Facebook Fanpage Chatbot</CardTitle>
-                      <CardDescription className="mb-4 card-description">
-                        Automated chatbot for Facebook Fanpage with message processing and user interaction capabilities.
-                      </CardDescription>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        <Badge variant="outline">NodeJS</Badge>
-                        <Badge variant="outline">Facebook API</Badge>
-                        <Badge variant="outline">Webhook</Badge>
-                      </div>
-                      <div className="flex gap-2 card-actions">
-                        <Button size="sm" variant="outline" asChild>
-                          <Link href="https://github.com/duybui03">
-                            <Github className="mr-2 h-4 w-4" />
-                            Code
-                          </Link>
-                        </Button>
-                        <Button size="sm" asChild>
-                          <Link href="#">
-                            <ExternalLink className="mr-2 h-4 w-4" />
-                            Demo
-                          </Link>
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
+            {/* IoT Project */}
+            <Card className="overflow-hidden border-2 hover:border-primary/50 transition-all">
+              <div className="grid md:grid-cols-5 gap-0">
+                <div className="md:col-span-2 relative h-64 md:h-auto">
+                  <Image
+                    src="/aqua_farm.webp"
+                    alt="Aqua Farm Mobile"
+                          width={300}
+                    height={180}
+                    className="object-cover"
+                  />
+                </div>
+                <div className="md:col-span-3 p-8 md:p-10">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Badge variant="outline">IoT</Badge>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">Aqua Farm Mobile</h3>
 
-                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="group hover:shadow-lg transition-shadow h-full project-card">
-                    <CardHeader className="card-header">
-                      <Image
-                        src="/placeholder.jpg"
-                        alt="E-commerce Backend and Dashboard"
-                        width={400}
-                        height={200}
-                        className="object-cover w-full"
-                      />
-                    </CardHeader>
-                    <CardContent className="card-content">
-                      <CardTitle className="mb-2">E-commerce Backend & Dashboard</CardTitle>
-                      <CardDescription className="mb-4 card-description">
-                        Complete e-commerce backend system with admin dashboard using NodeJS and Flutter for mobile interface.
-                      </CardDescription>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        <Badge variant="outline">NodeJS</Badge>
-                        <Badge variant="outline">Flutter</Badge>
-                        <Badge variant="outline">Express</Badge>
-                        <Badge variant="outline">REST API</Badge>
+                  <div className="space-y-4 text-muted-foreground mb-6">
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Context</p>
+                      <p>Real-time monitoring system for water quality parameters with cloud integration</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Role</p>
+                      <p>Full-stack Developer - Mobile app development, AWS IoT integration, real-time data visualization</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Tech Stack</p>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        <Badge variant="secondary">Flutter</Badge>
+                        <Badge variant="secondary">AWS IoT Core</Badge>
+                        <Badge variant="secondary">DynamoDB</Badge>
+                        <Badge variant="secondary">MQTT</Badge>
                       </div>
-                      <div className="flex gap-2 card-actions">
-                        <Button size="sm" variant="outline" asChild>
-                          <Link href="https://github.com/duybui03">
-                            <Github className="mr-2 h-4 w-4" />
-                            Code
-                          </Link>
-                        </Button>
-                        <Button size="sm" asChild>
-                          <Link href="#">
-                            <ExternalLink className="mr-2 h-4 w-4" />
-                            Demo
-                          </Link>
-                        </Button>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Impact</p>
+                      <p>Enabled real-time monitoring with 99.9% uptime and instant alert notifications</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* GIS Project */}
+            <Card className="overflow-hidden border-2 hover:border-primary/50 transition-all">
+              <div className="grid md:grid-cols-5 gap-0">
+                <div className="md:col-span-2 relative h-64 md:h-auto">
+                  <Image
+                    src="/giss.avif"
+                    alt="GIS Mapping Application"
+                           fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="md:col-span-3 p-8 md:p-10">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Badge variant="outline">GIS</Badge>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">GIS Mapping Application</h3>
+
+                  <div className="space-y-4 text-muted-foreground mb-6">
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Context</p>
+                      <p>Geographic information system for field data collection and mapping</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Role</p>
+                      <p>Mobile Developer - Map integration, offline data sync, location services</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Tech Stack</p>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        <Badge variant="secondary">Flutter</Badge>
+                        <Badge variant="secondary">Google Maps API</Badge>
+                        <Badge variant="secondary">SQLite</Badge>
+                        <Badge variant="secondary">Geolocation</Badge>
                       </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious className="left-2" />
-              <CarouselNext className="right-2" />
-            </Carousel>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Impact</p>
+                      <p>Reduced field data collection time by 40% with offline-first architecture</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* E-commerce Project */}
+            <Card className="overflow-hidden border-2 hover:border-primary/50 transition-all">
+              <div className="grid md:grid-cols-5 gap-0">
+                <div className="md:col-span-2 relative h-64 md:h-auto">
+                  <Image
+                    src="/loyalty_system.jpg"
+                    alt="E-commerce Platform"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="md:col-span-3 p-8 md:p-10">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Badge variant="outline">E-commerce</Badge>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">Customer Loyalty Platform</h3>
+
+                  <div className="space-y-4 text-muted-foreground mb-6">
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Context</p>
+                      <p>Loyalty points management system for retail businesses</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Role</p>
+                      <p>Full-stack Developer - Backend API, admin dashboard, mobile integration</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Tech Stack</p>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        <Badge variant="secondary">ReactJS</Badge>
+                        <Badge variant="secondary">NodeJS</Badge>
+                        <Badge variant="secondary">MongoDB</Badge>
+                        <Badge variant="secondary">REST API</Badge>
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Impact</p>
+                      <p>Increased customer retention by 25% through gamified rewards system</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Experience & Skills Section */}
-      <section id="experience" className="container mx-auto max-w-7xl py-8 md:py-12 lg:py-24 px-4">
+      <section id="experience" className="container mx-auto max-w-7xl py-12 md:py-16 lg:py-20 px-4 bg-muted/30">
         <div className="mx-auto max-w-[980px]">
-          <div className="flex flex-col items-center space-y-4 text-center">
-            <Badge variant="secondary" className="mb-4">
-              <Award className="mr-2 h-4 w-4" />
-              Experience & Skills
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Education & Experience
+          <div className="flex flex-col items-center space-y-6 text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              Experience
             </h2>
           </div>
 
-          <div className="grid gap-8 mt-12 md:grid-cols-2 max-w-6xl mx-auto place-items-start">
-            {/* Education & Experience */}
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Education & Experience</h3>
-              <div className="space-y-6">
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-center gap-2">
-                      <Calendar className="h-4 w-4 text-muted-foreground" />
-                      <span className="text-sm text-muted-foreground">2025</span>
-                    </div>
-                    <CardTitle>Fresher FE Developer</CardTitle>
-                    <CardDescription>Novax</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      Build web-admin
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-center gap-2">
-                      <Calendar className="h-4 w-4 text-muted-foreground" />
-                      <span className="text-sm text-muted-foreground">Present</span>
-                    </div>
-                    <CardTitle>Flutter Developer</CardTitle>
-                    <CardDescription>RBC Tech Vietnam</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      Building IoT water quality monitoring systems using Flutter and AWS.
-                      Developing mobile applications and integrating with cloud services.
-                    </p>
-                  </CardContent>
-                </Card>
+          <div className="space-y-8 max-w-3xl mx-auto">
+            <Card className="border-2">
+              <CardHeader>
+                <div className="flex items-center justify-between mb-2">
+                  <CardTitle className="text-xl">Flutter Developer</CardTitle>
+                  <Badge variant="secondary">Current</Badge>
+                </div>
+                <CardDescription className="text-base">RBC Tech Vietnam</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <p className="text-muted-foreground">
+                  • Developing IoT water quality monitoring systems with Flutter and AWS<br />
+                  • Implementing Clean Architecture patterns for scalable mobile applications<br />
+                  • Integrating real-time data synchronization with cloud services
+                </p>
+              </CardContent>
+            </Card>
 
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-center gap-2">
-                      <Calendar className="h-4 w-4 text-muted-foreground" />
-                      <span className="text-sm text-muted-foreground">2021 - 2025</span>
-                    </div>
-                    <CardTitle>Information Technology Student</CardTitle>
-                    <CardDescription>Hanoi University of Mining and Geology</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      High Quality Program - GPA: 3.38/4.0.
-                      Expected graduation: June 2025.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+            <Card className="border-2">
+              <CardHeader>
+                <div className="flex items-center justify-between mb-2">
+                  <CardTitle className="text-xl">Fresher Frontend Developer</CardTitle>
+                  <Badge variant="outline">2025</Badge>
+                </div>
+                <CardDescription className="text-base">Novax</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  • Built web admin dashboards with modern frontend frameworks<br />
+                  • Collaborated with backend teams for API integration
+                </p>
+              </CardContent>
+            </Card>
 
-            {/* Skills */}
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Technical Skills</h3>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold mb-2">Mobile Development</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge>Flutter</Badge>
-                    <Badge>Dart</Badge>
-                    <Badge>Mobile UI/UX</Badge>
-                  </div>
+            <Card className="border-2">
+              <CardHeader>
+                <div className="flex items-center justify-between mb-2">
+                  <CardTitle className="text-xl">Information Technology Student</CardTitle>
+                  <Badge variant="outline">2021 - 2025</Badge>
                 </div>
-                <Separator />
-                <div>
-                  <h4 className="font-semibold mb-2">Web Development</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge>ReactJS</Badge>
-                    <Badge>VueJS</Badge>
-                    <Badge>NodeJS</Badge>
-                    <Badge>JavaScript</Badge>
-                  </div>
-                </div>
-                <Separator />
-                <div>
-                  <h4 className="font-semibold mb-2">Cloud & Database</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge>AWS EC2</Badge>
-                    <Badge>AWS Lambda</Badge>
-                    <Badge>IoT Core</Badge>
-                    <Badge>DynamoDB</Badge>
-                    <Badge>MongoDB</Badge>
-                  </div>
-                </div>
-                <Separator />
-                <div>
-                  <h4 className="font-semibold mb-2">Tools & OS</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge>Git</Badge>
-                    <Badge>GitHub</Badge>
-                    <Badge>Linux Ubuntu</Badge>
-                    <Badge>VS Code</Badge>
-                  </div>
-                </div>
-              </div>
-            </div>
+                <CardDescription className="text-base">Hanoi University of Mining and Geology</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  High Quality Program • GPA: 3.38/4.0 • Expected graduation: June 2025
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto max-w-7xl py-8 md:py-12 lg:py-24 bg-muted/50 px-4">
+      <section id="contact" className="container mx-auto max-w-7xl py-12 md:py-16 lg:py-20 px-4">
         <div className="mx-auto max-w-[980px]">
-          <div className="flex flex-col items-center space-y-4 text-center">
-            <Badge variant="secondary" className="mb-4">
-              <Mail className="mr-2 h-4 w-4" />
-              Contact
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Let's create something amazing together
+          <div className="flex flex-col items-center space-y-6 text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              Let's Build Together
             </h2>
-            <p className="max-w-[700px] text-lg text-muted-foreground">
-              I am always ready to discuss job opportunities, mobile app projects, or simply chat about technology and IoT.
+            <p className="max-w-[650px] text-xl text-muted-foreground">
+              Ready to build scalable mobile products together? Let's discuss your next project.
             </p>
           </div>
 
-          <div className="grid gap-8 mt-12 md:grid-cols-2 max-w-5xl mx-auto place-items-stretch justify-items-center">
-            <Card className="w-full max-w-md">
-              <CardHeader className="text-center">
-                <CardTitle>Contact Information</CardTitle>
-                <CardDescription>
-                  Get in touch directly through the following channels
+          <div className="max-w-2xl mx-auto">
+            <Card className="border-2">
+              <CardHeader className="text-center pb-6">
+                <CardTitle className="text-2xl">Get In Touch</CardTitle>
+                <CardDescription className="text-base">
+                  Available for Flutter development opportunities and collaborations
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-muted-foreground" />
-                  <span>Duyka207@gmail.com</span>
+              <CardContent className="space-y-6">
+                <div className="grid gap-4">
+                  <div className="flex items-center gap-4 p-4 rounded-lg bg-muted/50">
+                    <Mail className="h-5 w-5 text-primary flex-shrink-0" />
+                    <div>
+                      <p className="font-medium">Email</p>
+                      <a href="mailto:duyka207@gmail.com" className="text-muted-foreground hover:text-foreground">
+                        Duyka207@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 rounded-lg bg-muted/50">
+                    <Phone className="h-5 w-5 text-primary flex-shrink-0" />
+                    <div>
+                      <p className="font-medium">Phone</p>
+                      <p className="text-muted-foreground">0327 868 763</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 rounded-lg bg-muted/50">
+                    <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
+                    <div>
+                      <p className="font-medium">Location</p>
+                      <p className="text-muted-foreground">Hanoi, Vietnam</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-muted-foreground" />
-                  <span>0327 868 763</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-muted-foreground" />
-                  <span>Hanoi, Vietnam</span>
-                </div>
+
                 <Separator />
-                <div className="flex gap-4">
-                  <Button variant="outline" size="sm" asChild>
-                    <Link href="https://github.com/duybui03">
-                      <Github className="mr-2 h-4 w-4" />
+
+                <div className="flex flex-wrap gap-3 justify-center">
+                  <Button variant="outline" asChild>
+                    <Link href="https://github.com/duybui03" className="gap-2">
+                      <Github className="h-4 w-4" />
                       GitHub
                     </Link>
                   </Button>
-                  <Button variant="outline" size="sm" asChild>
-                    <Link href="#">
-                      <Linkedin className="mr-2 h-4 w-4" />
+                  <Button variant="outline" asChild>
+                    <Link href="#" className="gap-2">
+                      <Linkedin className="h-4 w-4" />
                       LinkedIn
                     </Link>
                   </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="w-full max-w-md">
-              <CardHeader className="text-center">
-                <CardTitle>Send Message</CardTitle>
-                <CardDescription>
-                  Fill out the form below and I'll get back to you as soon as possible
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">
-                        Full Name
-                      </label>
-                      <input
-                        id="name"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="John Doe"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
-                        Email
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="email@example.com"
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm font-medium">
-                      Subject
-                    </label>
-                    <input
-                      id="subject"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="Project Collaboration"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="Describe your project or question in detail..."
-                    />
-                  </div>
-                  <Button type="submit" className="w-full">
-                    Send Message
+                  <Button asChild>
+                    <Link href="mailto:duyka207@gmail.com" className="gap-2">
+                      <Mail className="h-4 w-4" />
+                      Send Email
+                    </Link>
                   </Button>
-                </form>
+                </div>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t py-6 md:py-0">
-        <div className="container mx-auto max-w-7xl flex flex-col items-center justify-center gap-4 md:h-24 md:flex-row md:justify-between px-4">
-          <div className="flex flex-col items-center gap-4 md:flex-row md:gap-2">
-            <p className="text-center text-sm leading-loose text-muted-foreground">
-              © 2024 Bui Van Duy. All rights reserved.
-            </p>
+      {/* CTA Section */}
+      <section className="container mx-auto max-w-7xl py-12 md:py-16 px-4 bg-muted/30">
+        <div className="mx-auto max-w-[800px] text-center space-y-8">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Let's build scalable mobile products together
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-[600px] mx-auto">
+            Specialized in Flutter development with Clean Architecture, performance optimization, and seamless API integration
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center pt-4">
+            <Button size="lg" className="text-base px-8" asChild>
+              <Link href="mailto:duyka207@gmail.com">Start a Project</Link>
+            </Button>
+            <Button variant="outline" size="lg" className="text-base px-8" asChild>
+              <Link href="https://github.com/duybui03">View GitHub</Link>
+            </Button>
           </div>
-          <div className="flex items-center justify-center gap-4">
-            <Link href="#" className="text-muted-foreground hover:text-foreground">
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t py-8">
+        <div className="container mx-auto max-w-7xl flex flex-col items-center justify-center gap-4 md:flex-row md:justify-between px-4">
+          <p className="text-sm text-muted-foreground">
+            © 2025 Bui Van Duy. Flutter Developer.
+          </p>
+          <div className="flex items-center gap-6">
+            <Link href="https://github.com/duybui03" className="text-muted-foreground hover:text-foreground transition-colors">
               <Github className="h-5 w-5" />
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-foreground">
+            <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
               <Linkedin className="h-5 w-5" />
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-foreground">
+            <Link href="mailto:duyka207@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors">
               <Mail className="h-5 w-5" />
             </Link>
           </div>

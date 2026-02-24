@@ -5,8 +5,8 @@ import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata: Metadata = {
-  title: 'Bui Van Duy - Portfolio',
-  description: 'Mobile App Developer Portfolio - Flutter, AWS, IoT Systems',
+  title: 'Bui Van Duy - Flutter Developer',
+  description: 'Flutter Developer specializing in Clean Architecture, high-performance mobile applications, and seamless API integration. Building scalable mobile solutions.',
   generator: 'Next.js',
 }
 
