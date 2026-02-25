@@ -81,7 +81,7 @@ export const translations = {
       student: {
         title: "Information Technology Student",
         company: "Hanoi University of Mining and Geology",
-        description: "High Quality Program • GPA: 3.43/4.0 • Expected graduation: June 2025",
+        description: "High Quality Program • GPA: 3.43/4.0 • Expected graduation: June 2026",
       },
     },
     contact: {
@@ -186,7 +186,7 @@ export const translations = {
       student: {
         title: "Sinh viên Công nghệ thông tin",
         company: "Đại học Mỏ - Địa chất Hà Nội",
-        description: "Chương trình Chất lượng cao • GPA: 3.43/4.0 • Dự kiến tốt nghiệp: Tháng 6/2025",
+        description: "Chương trình Chất lượng cao • GPA: 3.43/4.0 • Dự kiến tốt nghiệp: Tháng 6/2026",
       },
     },
     contact: {
