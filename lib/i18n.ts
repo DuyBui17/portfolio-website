@@ -29,6 +29,7 @@ export const translations = {
       iot: "IoT",
       gis: "GIS",
       ecommerce: "E-commerce",
+      chatbot: "Chatbot",
       context: "Context",
       role: "Role",
       techStack: "Tech Stack",
@@ -40,7 +41,7 @@ export const translations = {
         impact: "Improved operational efficiency and streamlined customer service workflows",
       },
       iotWater: {
-        title: "Aqua Farm Mobile",
+        title: "IoT Water Quality Monitoring System",
         context: "Real-time monitoring system for water quality parameters with cloud integration",
         role: "Full-stack Developer - Mobile app development, AWS IoT integration, real-time data visualization",
         impact: "Enabled real-time monitoring with 99.9% uptime and instant alert notifications",
@@ -56,6 +57,12 @@ export const translations = {
         context: "Loyalty points management system for retail businesses",
         role: "Full-stack Developer - Backend API, admin dashboard, mobile integration",
         impact: "Increased customer retention by 25% through gamified rewards system",
+      },
+      facebookChatbot: {
+        title: "Facebook Chatbot with AI",
+        context: "Automated customer service chatbot for Facebook Pages using OpenAI integration",
+        role: "Backend Developer - Webhook integration, OpenAI API, conversation flow management",
+        impact: "Reduced response time by 80% and handled 500+ daily customer inquiries automatically",
       },
     },
     experience: {
@@ -127,6 +134,7 @@ export const translations = {
       iot: "IoT",
       gis: "GIS",
       ecommerce: "Thương mại điện tử",
+      chatbot: "Chatbot",
       context: "Bối cảnh",
       role: "Vai trò",
       techStack: "Công nghệ",
@@ -138,7 +146,7 @@ export const translations = {
         impact: "Cải thiện hiệu quả vận hành và tối ưu quy trình dịch vụ khách hàng",
       },
       iotWater: {
-        title: "Hệ thống giám sát chất lượng nước hỗ trợ nông nghiệp",
+        title: "Hệ thống giám sát chất lượng nước IoT",
         context: "Hệ thống giám sát thời gian thực các thông số chất lượng nước với tích hợp đám mây",
         role: "Full-stack Developer - Phát triển ứng dụng di động, tích hợp AWS IoT, trực quan hóa dữ liệu thời gian thực",
         impact: "Cho phép giám sát thời gian thực với 99.9% uptime và thông báo cảnh báo tức thì",
@@ -154,6 +162,12 @@ export const translations = {
         context: "Hệ thống quản lý điểm thưởng cho doanh nghiệp bán lẻ",
         role: "Full-stack Developer - Backend API, bảng điều khiển quản trị, tích hợp di động",
         impact: "Tăng 25% tỷ lệ giữ chân khách hàng thông qua hệ thống phần thưởng gamification",
+      },
+      facebookChatbot: {
+        title: "Chatbot Facebook tích hợp AI",
+        context: "Chatbot tự động hỗ trợ khách hàng cho Facebook Page sử dụng OpenAI",
+        role: "Backend Developer - Tích hợp Webhook, OpenAI API, quản lý luồng hội thoại",
+        impact: "Giảm 80% thời gian phản hồi và xử lý tự động 500+ yêu cầu khách hàng mỗi ngày",
       },
     },
     experience: {

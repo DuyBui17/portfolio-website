@@ -349,6 +349,51 @@ export default function PortfolioContent() {
                 </div>
               </div>
             </Card>
+
+            {/* Chatbot Project */}
+            <Card className="overflow-hidden border-2 hover:border-primary/50 transition-all">
+              <div className="grid md:grid-cols-5 gap-0">
+                <div className="md:col-span-2 relative h-48 md:h-auto flex items-center justify-center bg-muted/30">
+                  <Image
+                    src="/chatbotFb.png"
+                    alt="Facebook Chatbot"
+                    width={450}
+                    height={250}
+                    className="object-contain"
+                  />
+                </div>
+                <div className="md:col-span-3 p-8 md:p-10">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Badge variant="outline">{t.projects.chatbot}</Badge>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">{t.projects.facebookChatbot.title}</h3>
+                  
+                  <div className="space-y-4 text-muted-foreground mb-6">
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">{t.projects.context}</p>
+                      <p>{t.projects.facebookChatbot.context}</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">{t.projects.role}</p>
+                      <p>{t.projects.facebookChatbot.role}</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">{t.projects.techStack}</p>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        <Badge variant="secondary">NodeJS</Badge>
+                        <Badge variant="secondary">OpenAI API</Badge>
+                        <Badge variant="secondary">Facebook Messenger API</Badge>
+                        <Badge variant="secondary">Webhook</Badge>
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">{t.projects.impact}</p>
+                      <p>{t.projects.facebookChatbot.impact}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
